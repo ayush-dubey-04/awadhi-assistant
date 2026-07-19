@@ -1,0 +1,110 @@
+{
+  "_meta": {
+    "note": "SEED / PLACEHOLDER DATA ONLY. These entries are commonly-cited, widely-published Awadhi-belt proverbs and vocabulary used to prove out the pipeline. They have NOT been verified against native speakers per district and should not be treated as linguistically authoritative. Before any public launch, every entry must be reviewed by a native speaker from the specific district it's tagged with. See CONTRIBUTING.md (to be added) for the review workflow.",
+    "districts": ["Sultanpur", "Pratapgarh", "Amethi", "Ayodhya", "General Awadh"]
+  },
+  "literature": [
+    {
+      "id": "l001",
+      "source_text": "मंगल भवन अमंगल हारी। द्रवउ सो दसरथ अजिर बिहारी॥",
+      "transliteration": "Mangal bhavan amangal hari, dravau so Dasarath ajir bihari",
+      "work": "Ramcharitmanas",
+      "kanda": "Bal Kanda",
+      "hindi_meaning": "जो शुभता का घर है और अशुभता को हरने वाला है, वह प्रभु राजा दशरथ के आंगन में बालक रूप में विचरण करने वाले हैं — वे मुझ पर कृपा करें।",
+      "english_meaning": "He who is the abode of auspiciousness and the remover of all that is inauspicious — that same Lord, playing as a child in King Dasharath's courtyard — may he be gracious to me.",
+      "context": "One of the most widely recited chaupais in Ramcharitmanas, from the description of infant Rama in Ayodhya. Commonly used as an invocation/blessing verse in daily recitation across Awadh and beyond.",
+      "verification_note": "Cross-checked against multiple published sources; wording is standard and widely attested."
+    },
+    {
+      "id": "l002",
+      "source_text": "जाकी रही भावना जैसी। प्रभु मूरति देखी तिन तैसी॥",
+      "transliteration": "Jaki rahi bhavna jaisi, prabhu murati dekhi tin taisi",
+      "work": "Ramcharitmanas",
+      "kanda": "Bal Kanda",
+      "hindi_meaning": "जिस व्यक्ति की जैसी भावना (श्रद्धा, दृष्टिकोण) होती है, उसे भगवान का स्वरूप वैसा ही दिखाई देता है।",
+      "english_meaning": "As one's own faith and perception are, so does that person perceive the form of the divine.",
+      "context": "One of the most quoted lines from the epic, describing how different onlookers each perceive Rama according to their own inner disposition. Often cited outside religious contexts too, as a general statement about subjective perception.",
+      "verification_note": "Cross-checked against multiple published sources; wording is standard and widely attested."
+    }
+  ],
+  "words": [
+    {
+      "id": "w001",
+      "awadhi": "मोय",
+      "hindi": "मुझे",
+      "english": "to me / me",
+      "district": "General Awadh",
+      "notes": "Common Awadhi first-person oblique form, used across the Awadh belt instead of Hindi 'mujhe'."
+    },
+    {
+      "id": "w002",
+      "awadhi": "तोहार",
+      "hindi": "तुम्हारा",
+      "english": "your",
+      "district": "General Awadh",
+      "notes": "Second-person possessive, widely used across Sultanpur, Pratapgarh, Amethi, Ayodhya."
+    },
+    {
+      "id": "w003",
+      "awadhi": "का हो",
+      "hindi": "क्या हुआ / क्या बात है",
+      "english": "what's up / what happened",
+      "district": "Sultanpur",
+      "notes": "Common informal greeting/inquiry particle usage."
+    },
+    {
+      "id": "w004",
+      "awadhi": "अबहीं",
+      "hindi": "अभी",
+      "english": "right now",
+      "district": "General Awadh",
+      "notes": "Very common temporal adverb across the region."
+    },
+    {
+      "id": "w005",
+      "awadhi": "कतहूं",
+      "hindi": "कहीं भी",
+      "english": "anywhere",
+      "district": "Pratapgarh",
+      "notes": "Indefinite locative form."
+    }
+  ],
+  "proverbs": [
+    {
+      "id": "p001",
+      "awadhi": "जस करनी तस भरनी",
+      "hindi": "जैसी करनी वैसी भरनी",
+      "english": "As you sow, so shall you reap",
+      "district": "General Awadh",
+      "meaning": "A statement of moral consequence — actions determine outcomes.",
+      "usage_context": "Said when someone faces the natural result of their own past actions, often as a gentle rebuke."
+    },
+    {
+      "id": "p002",
+      "awadhi": "नाच न जाने आंगन टेढ़ा",
+      "hindi": "नाच न जाने आंगन टेढ़ा",
+      "english": "The one who can't dance blames the crooked courtyard",
+      "district": "General Awadh",
+      "meaning": "Blaming external circumstances for one's own lack of skill.",
+      "usage_context": "Used when someone makes excuses instead of admitting incompetence."
+    },
+    {
+      "id": "p003",
+      "awadhi": "अंधा बांटे रेवड़ी, फिर-फिर अपने को दे",
+      "hindi": "अंधा बांटे रेवड़ी, फिर-फिर अपने को दे",
+      "english": "A blind man distributing sweets keeps giving himself more",
+      "district": "General Awadh",
+      "meaning": "Favoritism toward oneself or one's own group when placed in a position of control.",
+      "usage_context": "Used to call out nepotism or self-favoring behavior in distribution of resources."
+    },
+    {
+      "id": "p004",
+      "awadhi": "घर का जोगी जोगड़ा, आन गांव का सिद्ध",
+      "hindi": "घर का जोगी जोगड़ा, बाहर गांव का सिद्ध",
+      "english": "A monk from home is ordinary, a monk from another village is a saint",
+      "district": "Ayodhya",
+      "meaning": "Local expertise is undervalued while outside expertise is over-respected.",
+      "usage_context": "Commonly used across the Awadh belt with village/temple culture references, given Ayodhya's religious significance."
+    }
+  ]
+}

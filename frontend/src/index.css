@@ -1,0 +1,375 @@
+:root {
+  --ink: #26324a;
+  --parchment: #f6f1e4;
+  --parchment-dim: #efe7d4;
+  --turmeric: #c7902b;
+  --terracotta: #a6502e;
+  --maroon: #6e2c3b;
+  --line: #ddd2b4;
+  --card: #fffdf7;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--parchment);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.devanagari {
+  font-family: 'Noto Serif Devanagari', 'Inter', sans-serif;
+}
+
+.app-shell {
+  max-width: 720px;
+  margin: 0 auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+}
+
+/* Signature element: a restrained chikankari-inspired hatch band,
+   referencing Lucknow/Awadh embroidery motifs without being literal. */
+.motif-band {
+  height: 10px;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--turmeric) 0px,
+    var(--turmeric) 2px,
+    transparent 2px,
+    transparent 10px
+  );
+  opacity: 0.85;
+}
+
+header.app-header {
+  padding: 28px 24px 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+header.app-header h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.6rem;
+  margin: 0 0 2px;
+  color: var(--ink);
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+header.app-header h1 .hi {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 1.5rem;
+  color: var(--terracotta);
+}
+
+header.app-header p.tagline {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  color: #6b6455;
+}
+
+.district-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.district-pill {
+  border: 1px solid var(--line);
+  background: var(--parchment-dim);
+  color: var(--ink);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.district-pill:hover {
+  border-color: var(--turmeric);
+}
+
+.district-pill.active {
+  background: var(--ink);
+  color: var(--parchment);
+  border-color: var(--ink);
+}
+
+main.chat-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.empty-state {
+  color: #8a8371;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 40px;
+  line-height: 1.6;
+}
+
+.bubble-row {
+  display: flex;
+}
+
+.bubble-row.user { justify-content: flex-end; }
+.bubble-row.assistant { justify-content: flex-start; }
+
+.bubble {
+  max-width: 82%;
+  padding: 12px 15px;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.bubble.user {
+  background: var(--ink);
+  color: var(--parchment);
+  border-bottom-right-radius: 3px;
+}
+
+.bubble.assistant {
+  background: var(--parchment-dim);
+  border: 1px solid var(--line);
+  border-bottom-left-radius: 3px;
+}
+
+.match-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.match-tag {
+  font-size: 0.68rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+}
+
+.match-tag.word { background: #e4ecdd; color: #3e5c2f; }
+.match-tag.proverb { background: #f0dfe2; color: var(--maroon); }
+
+.source-note {
+  margin-top: 8px;
+  font-size: 0.72rem;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.4;
+  padding-top: 8px;
+  border-top: 1px dashed var(--line);
+}
+
+.source-note.verified { color: #3e5c2f; }
+.source-note.unverified { color: var(--terracotta); }
+
+form.composer {
+  display: flex;
+  gap: 10px;
+  padding: 16px 24px 22px;
+  border-top: 1px solid var(--line);
+  background: var(--card);
+}
+
+form.composer input {
+  flex: 1;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 0.95rem;
+  font-family: 'Noto Serif Devanagari', 'Inter', sans-serif;
+  background: var(--parchment);
+  color: var(--ink);
+}
+
+form.composer input:focus {
+  outline: 2px solid var(--turmeric);
+  outline-offset: 1px;
+}
+
+form.composer button {
+  border: none;
+  background: var(--terracotta);
+  color: var(--parchment);
+  padding: 0 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+form.composer button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+form.composer button:focus-visible,
+.district-pill:focus-visible {
+  outline: 2px solid var(--turmeric);
+  outline-offset: 2px;
+}
+
+.phase-note {
+  font-size: 0.72rem;
+  color: #8a8371;
+  padding: 0 24px 14px;
+}
+
+.tab-row {
+  display: flex;
+  gap: 4px;
+  margin-top: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.tab-button {
+  border: none;
+  background: none;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #8a8371;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  font-family: inherit;
+}
+
+.tab-button.active {
+  color: var(--ink);
+  border-bottom-color: var(--terracotta);
+}
+
+.panel {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.panel-heading {
+  font-family: 'Fraunces', serif;
+  font-size: 1rem;
+  margin: 8px 0 0;
+  color: var(--ink);
+}
+
+.translate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lang-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+}
+
+.lang-row select {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 10px;
+  background: var(--parchment);
+  color: var(--ink);
+  font-family: inherit;
+}
+
+.translate-form textarea {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 0.95rem;
+  font-family: 'Noto Serif Devanagari', 'Inter', sans-serif;
+  background: var(--parchment);
+  color: var(--ink);
+  resize: vertical;
+}
+
+.translate-form button {
+  align-self: flex-start;
+  border: none;
+  background: var(--terracotta);
+  color: var(--parchment);
+  padding: 9px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.translate-form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.result-card {
+  background: var(--parchment-dim);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.result-text {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.verse-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--turmeric);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.verse-text {
+  font-size: 1.05rem;
+  color: var(--maroon);
+  margin-bottom: 6px;
+}
+
+.verse-transliteration {
+  font-size: 0.8rem;
+  color: #8a8371;
+  font-style: italic;
+  margin-bottom: 6px;
+}
+
+.verse-meaning {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.verse-source {
+  font-size: 0.72rem;
+  color: #8a8371;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
