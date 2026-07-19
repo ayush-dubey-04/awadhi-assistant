@@ -1,4 +1,4 @@
-# Awadhi Language Assistant — Phase 1 Prototype
+# Awadhi Language Assistant — Prototype (Phase 1-4)
 
 ## What this actually is (read this first)
 
